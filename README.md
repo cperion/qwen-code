@@ -50,7 +50,7 @@ For example, if you want to set the max session token limit to 32000, you can se
 
 ```json
 {
-  "maxSessionToken": 32000
+  "sessionTokenLimit": 32000
 }
 ```
 
@@ -72,7 +72,7 @@ export OPENAI_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"
 export OPENAI_MODEL="qwen3-coder-plus"
 ```
 
-If you are in mainland China, ModelScope offers 2,000 free model inference API calls per day:
+If you are in mainland China, ModelScope offers 2,000 free model inference API calls per day. Please make sure you connect your aliyun account to ModelScope so that you won't receive the API error like `API Error: OpenAI API error`.
 
 ```bash
 export OPENAI_API_KEY="your_api_key_here"
@@ -86,6 +86,14 @@ If you are not in mainland China, you can use Qwen3-Coder through the Alibaba Cl
 export OPENAI_API_KEY="your_api_key_here"
 export OPENAI_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
 export OPENAI_MODEL="qwen3-coder-plus"
+```
+
+OpenRouter also provides free Qwen3-Coder model access:
+
+```bash
+export OPENAI_API_KEY="your_api_key_here"
+export OPENAI_BASE_URL=https://openrouter.ai/api/v1
+export OPENAI_MODEL="qwen/qwen3-coder:free"
 ```
 
 ## Usage Examples
